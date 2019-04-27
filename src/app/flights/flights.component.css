@@ -1,0 +1,111 @@
+.bg-flight-container{
+    background-image: url('../../assets/images/bg_image.jpg');
+    height: 524px;
+    width: 1905px;
+    border-bottom: 5px solid #12b58a;
+}
+.search-flight-section{
+    margin-top: 50px;
+}
+.search-title{
+    color: #fff;
+    font-weight: 400;
+    font-size: 26px;
+    float: left;
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    margin: 0px;
+}
+.search-tabs{
+    background-color: #fff;
+    border-radius: 4px 4px 0px 0px;
+    float: right;
+    max-width: 285px;
+    height: 40px;
+    text-align: justify;
+    font-size: 13px;
+    color: white;
+    overflow: hidden;
+    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.4);
+}
+
+/* Travel Type Styles */
+
+.travel-type-container {
+    box-shadow: 0 0 6px 0 rgba(0,0,0,0.4);
+}
+
+.travel-type-wraper {
+
+}
+
+
+.travel-type {
+    background: #fff;
+    color: black;
+    font-weight: 700;
+    padding: 7px 10px;
+    border: 0;
+    flex: 1 1 0;
+    min-width: 100px;
+}
+
+
+
+.travel-type.round-trip {
+    border: 1px solid #efefef;
+}
+
+.travel-type.active {
+    background: #12b58a;
+    color: white;
+}
+
+.travel-type.one-way {
+    border-top-left-radius: 6px;
+}
+.travel-type.multi-city {
+    border-top-right-radius: 6px;
+}
+checked {
+    box-shadow: 0 0 0 3px lime;
+    color: red;
+  }
+
+  /* Travel Form Styles */
+  .travel-form{
+      background-color: aliceblue;
+      width: 55.8%;
+      border-top: 3px solid #12B58A;
+      padding-right: 15px;
+      padding-left: 15px;
+      padding-top: 5px;
+      
+  }
+  .travel-label{
+      margin-top: 15px;
+      margin-bottom: 0px;
+  }
+  .fa-calendar-alt{
+      color:  #12B58A;
+  }
+  .counter-element{
+    /* width: 171.3%;
+    display: inline-block; */
+    margin-top: 0px;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .travel-count{
+      border: 1px solid #12B58A;
+      width: 50%;
+  }
+  .travel-counts{
+    border-radius: 7px 0px 0px 7px !important;
+  }
+
+  .travel-counts-right {
+      border-radius: 0px 7px 7px 0px !important;
+  }
+  .travel-arrow{
+      padding-top: 40px;
+  }

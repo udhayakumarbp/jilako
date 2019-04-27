@@ -1,0 +1,132 @@
+<div class="container-fluid bg-flight-container m-0 p-0">
+  <div class="container">
+    <div class="row">
+      <div class="col col-md-7">
+        <section class="container-fluid search-flight-section">
+          <div class="row justify-content-between">
+            <div class="col col-md-5 search-title">Book Your Flights</div>
+            <div class="col col-md-7">
+              <div class="d-flex travel-type-container">
+                <label for="one-way" class="travel-type m-0 text-center active one-way">One way
+                  <input hidden name="travel-type" type="text">
+                </label>
+
+                <label class="travel-type m-0 text-center round-trip">Round trip <input hidden name="travel-type"
+                    type="text"></label>
+                <label class="travel-type m-0 text-center multi-city">Multi city <input hidden name="travel-type"
+                    type="text"></label>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="col col-md-12">
+        <section class="travel-form">
+          <div class="container">
+            <form [formGroup]="flightForms" (ngSubmit)="viaFlights()">
+              <div class="row">
+                <div class="col col-md-6">
+                  <label for="name" class="travel-label">From</label>
+                  <input type="text" name="form" formControlName="from" class="form-control"
+                    placeholder="Type atleast 3 letters">
+                </div>
+                <!-- <div class="col-md-2 travel-arrow"><i class="fas fa-exchange-alt"></i></div> -->
+                <div class="col col-md-6">
+                  <label class="travel-label">To</label>
+                  <input type="text" name="to" formControlName="to" class="form-control"
+                    placeholder="Type atleast 3 letters">
+
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-md-6">
+                  <label for="name" class="travel-label">DEPARTURE</label>
+                  <div class="input-group mb-3">
+                    <input type="date" name="departure" formControlName="departure" class="form-control"
+                      placeholder="Select Departure Date">
+                    <div class="input-group-append">
+                      <span class="input-group-text" id="basic-addon2"><i class="far fa-calendar-alt"></i></span>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col col-md-6">
+                  <label class="travel-label">Return</label>
+                  <div class="input-group mb-3">
+                    <input type="date" name="return" class="form-control" placeholder="Select Return Date">
+                    <div class="input-group-append">
+                      <span class="input-group-text" id="basic-addon2"><i class="far fa-calendar-alt"></i></span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="row mb-2">
+
+                <div class="col col-md-4 counter-element">
+                  <label class="">Adults
+                    <span>12 + Yrs</span>
+                  </label>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend ">
+                      <button class="btn btn-outline-secondary travel-counts" type="button" id="button-addon1"
+                        (click)="minus()">-</button>
+                    </div>
+                    <span class="travel-count text-center" style="top: -10px">{{adultsCounts}}</span>
+                    <div class="input-group-prepend ">
+                      <button class="btn btn-outline-secondary travel-counts-right" type="button" id="button-addon1"
+                        (click)="plus()">+</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-md-4 counter-element">
+                  <label class="">Children
+                    <span>2 - 12 Yrs</span>
+                  </label>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <button class="btn btn-outline-secondary travel-counts" type="button" id="button-addon1"
+                        (click)="secondMinus()">-</button>
+                    </div>
+                    <span class="travel-count text-center">{{childrenCounts}}</span>
+
+                    <div class="input-group-prepend">
+                      <button class="btn btn-outline-secondary travel-counts-right" type="button" id="button-addon1"
+                        (click)="secondPlus()">+</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-md-4 counter-element">
+                  <label class=""> Infants
+                    <span>0 - 2 Yrs</span>
+                  </label>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <button class="btn btn-outline-secondary travel-counts" type="button"
+                        (click)="infantsMinus()">-</button>
+                    </div>
+                    <span class="travel-count text-center">{{infantsCount}}</span>
+                    <div class="input-group-prepend">
+                      <button class="btn btn-outline-secondary travel-counts-right" type="button"
+                        (click)="infantsPlus()">+</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-md-8"></div>
+                <div class="col col-md-4 mb-3">
+                  <button type="submit" class="btn btn-danger mt-3 px-5"
+                    [disabled]="flightForms.invalid">Search</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+
+
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
